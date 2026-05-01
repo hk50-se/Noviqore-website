@@ -71,7 +71,7 @@ export default function AISolutionsPage() {
 
       <section className="section-space pb-6">
         <div className="container-shell">
-          <Card className="overflow-hidden border-amber-200/20 bg-gradient-to-r from-slate-950/90 via-slate-900/85 to-slate-950/90 p-6 sm:p-8">
+          <Card className="overflow-hidden border-amber-200/20 bg-gradient-to-r from-zinc-950/90 via-zinc-900/85 to-zinc-950/90 p-6 sm:p-8">
             <div className="grid items-center gap-6 md:grid-cols-[auto_1fr]">
               <Image
                 src="/brand/qori-mascot.png"
@@ -85,7 +85,7 @@ export default function AISolutionsPage() {
                 <h2 className="font-display text-2xl font-semibold text-white sm:text-3xl">
                   Your AI assistant concept, built for real business workflows
                 </h2>
-                <p className="text-sm text-slate-300 sm:text-base">
+                <p className="text-sm text-zinc-300 sm:text-base">
                   Noviqore can build assistants like Qori for customer support, internal copilots, operations routing,
                   and task automation. From retrieval and tool-calling to monitoring and guardrails, we design AI
                   systems that are useful in production, not just demos.
@@ -101,12 +101,12 @@ export default function AISolutionsPage() {
           {implementationPillars.map((pillar) => {
             const Icon = pillar.icon;
             return (
-              <Card key={pillar.title} className="border-white/12 bg-slate-950/60">
+              <Card key={pillar.title} className="border-white/12 bg-zinc-950/60">
                 <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-300/12 text-emerald-200">
                   <Icon className="h-5 w-5" />
                 </div>
                 <h2 className="mt-4 text-xl font-semibold text-white">{pillar.title}</h2>
-                <p className="mt-2 text-sm text-slate-300">{pillar.description}</p>
+                <p className="mt-2 text-sm text-zinc-300">{pillar.description}</p>
               </Card>
             );
           })}
@@ -116,9 +116,9 @@ export default function AISolutionsPage() {
       <section className="pb-8">
         <div className="container-shell grid gap-4 md:grid-cols-2">
           {capabilityGroups.map((group) => (
-            <Card key={group.title} className="border-white/12 bg-slate-950/60">
+            <Card key={group.title} className="border-white/12 bg-zinc-950/60">
               <h3 className="text-xl font-semibold text-white">{group.title}</h3>
-              <ul className="mt-4 grid gap-2 text-sm text-slate-300">
+              <ul className="mt-4 grid gap-2 text-sm text-zinc-300">
                 {group.items.map((item) => (
                   <li key={item} className="rounded-md border border-white/10 bg-white/[0.02] px-3 py-2">
                     {item}
@@ -133,10 +133,10 @@ export default function AISolutionsPage() {
       <section className="section-space pt-10">
         <div className="container-shell grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {aiSolutions.map((item) => (
-            <Card key={item.id} className="border-white/12 bg-gradient-to-b from-slate-900/90 to-slate-950/70">
+            <Card key={item.id} className="border-white/12 bg-gradient-to-b from-zinc-900/90 to-zinc-950/70">
               <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-              <p className="mt-2 text-sm text-slate-300">{item.summary}</p>
-              <ul className="mt-4 grid gap-2 text-sm text-slate-300">
+              <p className="mt-2 text-sm text-zinc-300">{item.summary}</p>
+              <ul className="mt-4 grid gap-2 text-sm text-zinc-300">
                 {item.capabilities.map((capability) => (
                   <li key={capability} className="rounded-md border border-white/10 bg-white/[0.02] px-3 py-2">
                     {capability}
@@ -157,6 +157,7 @@ export default function AISolutionsPage() {
     </>
   );
 }
+
 
 
 

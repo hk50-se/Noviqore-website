@@ -30,10 +30,10 @@ export default function ProcessPage() {
       <section className="pb-8">
         <div className="container-shell grid gap-4 md:grid-cols-3">
           {processSteps.slice(0, 3).map((item) => (
-            <Card key={item.step} className="border-white/12 bg-slate-950/60">
+            <Card key={item.step} className="border-white/12 bg-zinc-950/60">
               <p className="text-xs uppercase tracking-[0.18em] text-emerald-200">Step {item.step}</p>
               <h3 className="mt-2 text-lg font-semibold text-white">{item.title}</h3>
-              <p className="mt-2 text-sm text-slate-300">{item.description}</p>
+              <p className="mt-2 text-sm text-zinc-300">{item.description}</p>
             </Card>
           ))}
         </div>
@@ -43,6 +43,7 @@ export default function ProcessPage() {
     </>
   );
 }
+
 
 
 

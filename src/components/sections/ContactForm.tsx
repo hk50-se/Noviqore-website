@@ -82,7 +82,7 @@ export function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-5" noValidate>
       <div className="grid gap-4 md:grid-cols-2">
         <div className="space-y-2">
-          <label htmlFor="name" className="text-sm font-medium text-slate-200">
+          <label htmlFor="name" className="text-sm font-medium text-zinc-200">
             Name
           </label>
           <input
@@ -91,7 +91,7 @@ export function ContactForm() {
             autoComplete="name"
             value={form.name}
             onChange={(event) => handleChange('name', event.target.value)}
-            className="w-full rounded-xl border border-white/15 bg-slate-900/70 px-4 py-2.5 text-slate-100 outline-none ring-0 transition focus:border-emerald-300/40"
+            className="w-full rounded-xl border border-white/15 bg-zinc-900/70 px-4 py-2.5 text-zinc-100 outline-none ring-0 transition focus:border-emerald-300/40"
             aria-invalid={Boolean(errors.name)}
             aria-describedby={errors.name ? 'name-error' : undefined}
           />
@@ -103,7 +103,7 @@ export function ContactForm() {
         </div>
 
         <div className="space-y-2">
-          <label htmlFor="email" className="text-sm font-medium text-slate-200">
+          <label htmlFor="email" className="text-sm font-medium text-zinc-200">
             Email
           </label>
           <input
@@ -113,7 +113,7 @@ export function ContactForm() {
             autoComplete="email"
             value={form.email}
             onChange={(event) => handleChange('email', event.target.value)}
-            className="w-full rounded-xl border border-white/15 bg-slate-900/70 px-4 py-2.5 text-slate-100 outline-none ring-0 transition focus:border-emerald-300/40"
+            className="w-full rounded-xl border border-white/15 bg-zinc-900/70 px-4 py-2.5 text-zinc-100 outline-none ring-0 transition focus:border-emerald-300/40"
             aria-invalid={Boolean(errors.email)}
             aria-describedby={errors.email ? 'email-error' : undefined}
           />
@@ -127,7 +127,7 @@ export function ContactForm() {
 
       <div className="grid gap-4 md:grid-cols-2">
         <div className="space-y-2">
-          <label htmlFor="company" className="text-sm font-medium text-slate-200">
+          <label htmlFor="company" className="text-sm font-medium text-zinc-200">
             Company
           </label>
           <input
@@ -136,7 +136,7 @@ export function ContactForm() {
             autoComplete="organization"
             value={form.company}
             onChange={(event) => handleChange('company', event.target.value)}
-            className="w-full rounded-xl border border-white/15 bg-slate-900/70 px-4 py-2.5 text-slate-100 outline-none ring-0 transition focus:border-emerald-300/40"
+            className="w-full rounded-xl border border-white/15 bg-zinc-900/70 px-4 py-2.5 text-zinc-100 outline-none ring-0 transition focus:border-emerald-300/40"
             aria-invalid={Boolean(errors.company)}
             aria-describedby={errors.company ? 'company-error' : undefined}
           />
@@ -148,7 +148,7 @@ export function ContactForm() {
         </div>
 
         <div className="space-y-2">
-          <label htmlFor="budgetRange" className="text-sm font-medium text-slate-200">
+          <label htmlFor="budgetRange" className="text-sm font-medium text-zinc-200">
             Budget Range
           </label>
           <select
@@ -156,7 +156,7 @@ export function ContactForm() {
             name="budgetRange"
             value={form.budgetRange}
             onChange={(event) => handleChange('budgetRange', event.target.value as ContactInput['budgetRange'])}
-            className="w-full rounded-xl border border-white/15 bg-slate-900/70 px-4 py-2.5 text-slate-100 outline-none transition focus:border-emerald-300/40"
+            className="w-full rounded-xl border border-white/15 bg-zinc-900/70 px-4 py-2.5 text-zinc-100 outline-none transition focus:border-emerald-300/40"
             aria-invalid={Boolean(errors.budgetRange)}
           >
             {contactBudgetRanges.map((option) => (
@@ -169,7 +169,7 @@ export function ContactForm() {
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="projectType" className="text-sm font-medium text-slate-200">
+        <label htmlFor="projectType" className="text-sm font-medium text-zinc-200">
           Project Type
         </label>
         <select
@@ -177,7 +177,7 @@ export function ContactForm() {
           name="projectType"
           value={form.projectType}
           onChange={(event) => handleChange('projectType', event.target.value as ContactInput['projectType'])}
-          className="w-full rounded-xl border border-white/15 bg-slate-900/70 px-4 py-2.5 text-slate-100 outline-none transition focus:border-emerald-300/40"
+          className="w-full rounded-xl border border-white/15 bg-zinc-900/70 px-4 py-2.5 text-zinc-100 outline-none transition focus:border-emerald-300/40"
           aria-invalid={Boolean(errors.projectType)}
         >
           {contactProjectTypes.map((option) => (
@@ -189,7 +189,7 @@ export function ContactForm() {
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="message" className="text-sm font-medium text-slate-200">
+        <label htmlFor="message" className="text-sm font-medium text-zinc-200">
           Message
         </label>
         <textarea
@@ -198,7 +198,7 @@ export function ContactForm() {
           rows={6}
           value={form.message}
           onChange={(event) => handleChange('message', event.target.value)}
-          className="w-full resize-y rounded-xl border border-white/15 bg-slate-900/70 px-4 py-2.5 text-slate-100 outline-none transition focus:border-emerald-300/40"
+          className="w-full resize-y rounded-xl border border-white/15 bg-zinc-900/70 px-4 py-2.5 text-zinc-100 outline-none transition focus:border-emerald-300/40"
           aria-invalid={Boolean(errors.message)}
           aria-describedby={errors.message ? 'message-error' : 'message-count'}
         />
@@ -208,7 +208,7 @@ export function ContactForm() {
               {errors.message}
             </p>
           ) : (
-            <p id="message-count" className="text-xs text-slate-400">
+            <p id="message-count" className="text-xs text-zinc-400">
               {charCount}/2000
             </p>
           )}
@@ -225,6 +225,7 @@ export function ContactForm() {
     </form>
   );
 }
+
 
 
 

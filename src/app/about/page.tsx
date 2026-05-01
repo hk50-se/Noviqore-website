@@ -37,21 +37,21 @@ export default function AboutPage() {
 
       <section className="section-space">
         <div className="container-shell grid gap-4 lg:grid-cols-2">
-          <Card className="border-white/12 bg-slate-950/60">
+          <Card className="border-white/12 bg-zinc-950/60">
             <h2 className="text-2xl font-semibold text-white">How Noviqore works</h2>
-            <p className="mt-3 text-sm text-slate-300">
+            <p className="mt-3 text-sm text-zinc-300">
               Noviqore was founded with a product-engineering mindset: strong architecture first, execution discipline second,
               and measurable business outcomes throughout delivery. Every engagement combines product thinking with practical
               implementation depth across frontend, backend, AI, and cloud infrastructure.
             </p>
-            <p className="mt-3 text-sm text-slate-300">
+            <p className="mt-3 text-sm text-zinc-300">
               The focus is consistent: maintainable code, robust systems, and long-term support models that keep software useful
               as business priorities evolve.
             </p>
           </Card>
-          <Card className="border-white/12 bg-slate-950/60">
+          <Card className="border-white/12 bg-zinc-950/60">
             <h2 className="text-2xl font-semibold text-white">What clients can expect</h2>
-            <ul className="mt-3 grid gap-2 text-sm text-slate-300">
+            <ul className="mt-3 grid gap-2 text-sm text-zinc-300">
               <li className="rounded-md border border-white/10 bg-white/[0.02] px-3 py-2">Product-level technical planning before execution</li>
               <li className="rounded-md border border-white/10 bg-white/[0.02] px-3 py-2">Clean architecture and modular implementation strategy</li>
               <li className="rounded-md border border-white/10 bg-white/[0.02] px-3 py-2">Iterative delivery with transparent communication</li>
@@ -66,12 +66,12 @@ export default function AboutPage() {
           {values.map((value) => {
             const Icon = value.icon;
             return (
-              <Card key={value.title} className="border-white/12 bg-slate-950/60">
+              <Card key={value.title} className="border-white/12 bg-zinc-950/60">
                 <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-300/12 text-emerald-200">
                   <Icon className="h-5 w-5" />
                 </div>
                 <h3 className="mt-4 text-lg font-semibold text-white">{value.title}</h3>
-                <p className="mt-2 text-sm text-slate-300">{value.description}</p>
+                <p className="mt-2 text-sm text-zinc-300">{value.description}</p>
               </Card>
             );
           })}
@@ -83,6 +83,7 @@ export default function AboutPage() {
     </>
   );
 }
+
 
 
 

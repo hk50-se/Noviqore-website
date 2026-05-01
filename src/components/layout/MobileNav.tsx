@@ -19,7 +19,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -8 }}
           transition={{ duration: 0.2 }}
-          className="container-shell mt-2 rounded-2xl border border-white/15 bg-slate-950/95 p-4 shadow-panel backdrop-blur"
+          className="container-shell mt-2 rounded-2xl border border-white/15 bg-zinc-950/95 p-4 shadow-panel backdrop-blur"
         >
           <nav className="grid gap-1">
             {navItems.map((item) => (
@@ -27,7 +27,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
                 key={item.href}
                 href={item.href}
                 onClick={onClose}
-                className="rounded-lg px-3 py-2 text-sm font-medium text-slate-200 hover:bg-white/10"
+                className="rounded-lg px-3 py-2 text-sm font-medium text-zinc-200 hover:bg-white/10"
               >
                 {item.label}
               </Link>
@@ -48,6 +48,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
     </AnimatePresence>
   );
 }
+
 
 
 

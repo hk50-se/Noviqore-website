@@ -26,7 +26,7 @@ export function ProductSolutionsSection({ limit }: { limit?: number }) {
 
             return (
               <Reveal key={product.id} delay={index * 0.04}>
-                <Card className="h-full border-white/12 bg-slate-950/60">
+                <Card className="h-full border-white/12 bg-zinc-950/60">
                   <div className="flex items-start justify-between gap-4">
                     <h3 className="text-xl font-semibold text-white">{product.title}</h3>
                     {isAiProduct ? (
@@ -39,17 +39,17 @@ export function ProductSolutionsSection({ limit }: { limit?: number }) {
                       />
                     ) : null}
                   </div>
-                <p className="mt-2 text-sm text-slate-300">{product.description}</p>
+                <p className="mt-2 text-sm text-zinc-300">{product.description}</p>
                 <p className="mt-4 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-200">Key Features</p>
-                <ul className="mt-3 grid gap-2 text-sm text-slate-300">
+                <ul className="mt-3 grid gap-2 text-sm text-zinc-300">
                   {product.features.map((feature) => (
                     <li key={feature} className="rounded-md border border-white/10 bg-white/[0.02] px-3 py-2">
                       {feature}
                     </li>
                   ))}
                 </ul>
-                <p className="mt-4 text-sm text-slate-300">
-                  <span className="font-semibold text-slate-100">Ideal for:</span> {product.idealFor}
+                <p className="mt-4 text-sm text-zinc-300">
+                  <span className="font-semibold text-zinc-100">Ideal for:</span> {product.idealFor}
                 </p>
                 <Link href="/contact" className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-emerald-200 hover:text-emerald-100">
                   {product.cta}
@@ -64,6 +64,7 @@ export function ProductSolutionsSection({ limit }: { limit?: number }) {
     </section>
   );
 }
+
 
 
 

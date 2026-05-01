@@ -41,8 +41,8 @@ export function Header() {
         className={cn(
           'container-shell flex items-center justify-between rounded-2xl border px-4 py-3 transition-all sm:px-6',
           isScrolled
-            ? 'border-white/20 bg-slate-950/80 shadow-panel backdrop-blur-xl'
-            : 'border-white/10 bg-slate-900/45 backdrop-blur-sm'
+            ? 'border-white/20 bg-zinc-950/80 shadow-panel backdrop-blur-xl'
+            : 'border-white/10 bg-zinc-900/45 backdrop-blur-sm'
         )}
       >
         <Link href="/" aria-label="Noviqore home">
@@ -57,7 +57,7 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  'rounded-lg px-3 py-2 text-sm font-medium text-slate-300 transition hover:text-white',
+                  'rounded-lg px-3 py-2 text-sm font-medium text-zinc-300 transition hover:text-white',
                   isActive && 'bg-white/10 text-white'
                 )}
               >
@@ -68,7 +68,7 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <Link href="/case-studies" className="text-sm text-slate-300 hover:text-white">
+          <Link href="/case-studies" className="text-sm text-zinc-300 hover:text-white">
             View Our Work
           </Link>
           <Link href="/contact">
@@ -78,7 +78,7 @@ export function Header() {
 
         <button
           type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 text-slate-200 lg:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 text-zinc-200 lg:hidden"
           aria-label="Toggle menu"
           onClick={() => setIsMobileNavOpen((value) => !value)}
         >
@@ -90,6 +90,7 @@ export function Header() {
     </header>
   );
 }
+
 
 
 

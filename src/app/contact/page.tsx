@@ -29,9 +29,9 @@ export default function ContactPage() {
 
       <section className="section-space">
         <div className="container-shell grid gap-5 lg:grid-cols-[1.4fr_1fr]">
-          <Card className="border-white/12 bg-slate-950/65 p-6 sm:p-8">
+          <Card className="border-white/12 bg-zinc-950/65 p-6 sm:p-8">
             <h2 className="text-2xl font-semibold text-white">Project Inquiry Form</h2>
-            <p className="mt-2 text-sm text-slate-300">
+            <p className="mt-2 text-sm text-zinc-300">
               Tell us what you are building and where you need engineering support.
             </p>
             <div className="mt-6">
@@ -40,9 +40,9 @@ export default function ContactPage() {
           </Card>
 
           <div className="grid gap-4">
-            <Card className="border-white/12 bg-slate-950/65">
+            <Card className="border-white/12 bg-zinc-950/65">
               <h3 className="text-lg font-semibold text-white">Direct Contact</h3>
-              <ul className="mt-4 space-y-3 text-sm text-slate-300">
+              <ul className="mt-4 space-y-3 text-sm text-zinc-300">
                 <li className="inline-flex items-center gap-2">
                   <Mail className="h-4 w-4 text-emerald-300" />
                   <a href={`mailto:${siteConfig.email}`} className="hover:text-white">
@@ -60,9 +60,9 @@ export default function ContactPage() {
               </ul>
             </Card>
 
-            <Card className="border-white/12 bg-slate-950/65">
+            <Card className="border-white/12 bg-zinc-950/65">
               <h3 className="text-lg font-semibold text-white">Response Expectations</h3>
-              <ul className="mt-4 grid gap-2 text-sm text-slate-300">
+              <ul className="mt-4 grid gap-2 text-sm text-zinc-300">
                 <li className="rounded-md border border-white/10 bg-white/[0.02] px-3 py-2">Initial response with project-fit feedback</li>
                 <li className="rounded-md border border-white/10 bg-white/[0.02] px-3 py-2">Technical consultation scheduling</li>
                 <li className="rounded-md border border-white/10 bg-white/[0.02] px-3 py-2">Proposed scope, milestones, and delivery approach</li>
@@ -75,6 +75,7 @@ export default function ContactPage() {
     </>
   );
 }
+
 
 
 

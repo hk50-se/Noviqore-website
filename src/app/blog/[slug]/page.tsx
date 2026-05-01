@@ -69,15 +69,15 @@ export default async function BlogArticlePage({
           <h1 className="mt-4 max-w-4xl font-display text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
             {post.title}
           </h1>
-          <p className="mt-4 max-w-3xl text-base text-slate-300 sm:text-lg">{post.excerpt}</p>
-          <div className="mt-5 inline-flex items-center gap-2 text-sm text-slate-400">
+          <p className="mt-4 max-w-3xl text-base text-zinc-300 sm:text-lg">{post.excerpt}</p>
+          <div className="mt-5 inline-flex items-center gap-2 text-sm text-zinc-400">
             <CalendarDays className="h-4 w-4" />
             <span>{post.publishedAt}</span>
             <span>�</span>
             <span>{post.readingTime}</span>
           </div>
           {isAiArticle ? (
-            <div className="mt-6 inline-flex items-center gap-3 rounded-2xl border border-amber-200/25 bg-slate-950/70 px-3 py-2">
+            <div className="mt-6 inline-flex items-center gap-3 rounded-2xl border border-amber-200/25 bg-zinc-950/70 px-3 py-2">
               <Image
                 src="/brand/qori-mascot.png"
                 alt="Qori, Noviqore's AI assistant mascot"
@@ -85,7 +85,7 @@ export default async function BlogArticlePage({
                 height={44}
                 className="h-11 w-11 rounded-lg border border-amber-200/30 object-cover"
               />
-              <p className="text-sm text-slate-200">Qori insight: This article covers practical AI implementation guidance.</p>
+              <p className="text-sm text-zinc-200">Qori insight: This article covers practical AI implementation guidance.</p>
             </div>
           ) : null}
         </div>
@@ -96,7 +96,7 @@ export default async function BlogArticlePage({
           {post.sections.map((section) => (
             <section key={section.heading} className="space-y-3">
               <h2 className="text-2xl font-semibold text-white">{section.heading}</h2>
-              <div className="space-y-4 text-base leading-7 text-slate-300">
+              <div className="space-y-4 text-base leading-7 text-zinc-300">
                 {section.paragraphs.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
                 ))}
@@ -111,4 +111,5 @@ export default async function BlogArticlePage({
     </>
   );
 }
+
 

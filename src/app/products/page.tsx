@@ -27,17 +27,17 @@ export default function ProductsPage() {
       />
       <ProductSolutionsSection />
       <section className="pb-8">
-        <div className="container-shell rounded-2xl border border-white/10 bg-slate-950/55 p-6 text-sm text-slate-300 sm:p-8">
+        <div className="container-shell rounded-2xl border border-white/10 bg-zinc-950/55 p-6 text-sm text-zinc-300 sm:p-8">
           <p>
             These offerings are representative solution categories, not pre-built off-the-shelf products. Each implementation is
             scoped around your processes, integrations, compliance requirements, and growth strategy.
           </p>
-          <p className="mt-4 text-slate-200">
+          <p className="mt-4 text-zinc-200">
             Available solution categories include AI Business Assistant, AI Customer Support Platform, Smart Admin Dashboard,
             ERP / Operations System, CRM & Sales Automation, Marketplace Platform, Booking / Scheduling System, and Analytics &
             Reporting System.
           </p>
-          <p className="mt-4 text-slate-400">Total representative solution tracks: {productSolutions.length}</p>
+          <p className="mt-4 text-zinc-400">Total representative solution tracks: {productSolutions.length}</p>
         </div>
       </section>
       <CTASection />
@@ -45,6 +45,7 @@ export default function ProductsPage() {
     </>
   );
 }
+
 
 
 

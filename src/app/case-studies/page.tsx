@@ -29,27 +29,27 @@ export default function CaseStudiesPage() {
       <section className="section-space">
         <div className="container-shell grid gap-4">
           {caseStudies.map((study, index) => (
-            <Card key={study.slug} className="border-white/12 bg-slate-950/60 p-6 sm:p-7">
+            <Card key={study.slug} className="border-white/12 bg-zinc-950/60 p-6 sm:p-7">
               <div className="flex flex-wrap items-center justify-between gap-3">
                 <h2 className="font-display text-2xl font-semibold text-white">{index + 1}. {study.title}</h2>
                 <span className="rounded-full border border-emerald-300/30 bg-emerald-300/10 px-3 py-1 text-xs uppercase tracking-[0.14em] text-emerald-200">
                   {study.label}
                 </span>
               </div>
-              <p className="mt-3 text-sm text-slate-300">{study.summary}</p>
+              <p className="mt-3 text-sm text-zinc-300">{study.summary}</p>
 
               <div className="mt-6 grid gap-5 lg:grid-cols-3">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-200">Problem</p>
-                  <p className="mt-2 text-sm text-slate-300">{study.problem}</p>
+                  <p className="mt-2 text-sm text-zinc-300">{study.problem}</p>
                 </div>
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-200">Solution</p>
-                  <p className="mt-2 text-sm text-slate-300">{study.solution}</p>
+                  <p className="mt-2 text-sm text-zinc-300">{study.solution}</p>
                 </div>
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-200">Result</p>
-                  <ul className="mt-2 grid gap-2 text-sm text-slate-300">
+                  <ul className="mt-2 grid gap-2 text-sm text-zinc-300">
                     {study.results.map((result) => (
                       <li key={result} className="rounded-md border border-white/10 bg-white/[0.02] px-3 py-2">
                         {result}
@@ -59,8 +59,8 @@ export default function CaseStudiesPage() {
                 </div>
               </div>
 
-              <p className="mt-5 text-sm text-slate-300">
-                <span className="font-semibold text-slate-100">Tech stack:</span> {study.techStack.join(' • ')}
+              <p className="mt-5 text-sm text-zinc-300">
+                <span className="font-semibold text-zinc-100">Tech stack:</span> {study.techStack.join(' • ')}
               </p>
             </Card>
           ))}
@@ -72,6 +72,7 @@ export default function CaseStudiesPage() {
     </>
   );
 }
+
 
 
 

@@ -42,13 +42,13 @@ export default function TechnologiesPage() {
           {technologyCategories.map((group) => {
             const Icon = iconMap[group.category as keyof typeof iconMap];
             return (
-              <Card key={group.category} className="border-white/12 bg-slate-950/60">
+              <Card key={group.category} className="border-white/12 bg-zinc-950/60">
                 <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-300/12 text-emerald-200">
                   <Icon className="h-5 w-5" />
                 </div>
                 <h2 className="mt-4 text-xl font-semibold text-white">{group.category}</h2>
-                <p className="mt-2 text-sm text-slate-300">{group.description}</p>
-                <p className="mt-4 text-sm text-slate-200">{group.items.join(' • ')}</p>
+                <p className="mt-2 text-sm text-zinc-300">{group.description}</p>
+                <p className="mt-4 text-sm text-zinc-200">{group.items.join(' • ')}</p>
               </Card>
             );
           })}
@@ -59,6 +59,7 @@ export default function TechnologiesPage() {
     </>
   );
 }
+
 
 
 

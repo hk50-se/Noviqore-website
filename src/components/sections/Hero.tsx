@@ -65,7 +65,7 @@ export function Hero() {
             initial={shouldReduceMotion ? undefined : { opacity: 0, y: 24 }}
             animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.18 }}
-            className="mx-auto max-w-3xl text-base text-slate-300 sm:text-lg"
+            className="mx-auto max-w-3xl text-base text-zinc-300 sm:text-lg"
           >
             We design and develop scalable web platforms, backend systems, AI-powered products, automation tools,
             and cloud-native software for modern businesses.
@@ -91,7 +91,7 @@ export function Hero() {
             initial={shouldReduceMotion ? undefined : { opacity: 0, y: 20 }}
             animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.35 }}
-            className="mx-auto hidden max-w-md items-center gap-4 rounded-2xl border border-amber-200/25 bg-slate-950/65 p-3 text-left shadow-panel backdrop-blur md:flex"
+            className="mx-auto hidden max-w-md items-center gap-4 rounded-2xl border border-amber-200/25 bg-zinc-950/65 p-3 text-left shadow-panel backdrop-blur md:flex"
           >
             <Image
               src="/brand/qori-mascot.png"
@@ -103,7 +103,7 @@ export function Hero() {
             />
             <div>
               <p className="text-xs uppercase tracking-[0.18em] text-amber-100">Meet Qori</p>
-              <p className="mt-1 text-sm text-slate-200">
+              <p className="mt-1 text-sm text-zinc-200">
                 AI assistant concept for customer support, internal copilots, and process automation.
               </p>
             </div>
@@ -117,7 +117,7 @@ export function Hero() {
             return (
               <motion.div
                 key={item.title}
-                className={`w-full rounded-2xl border border-white/15 bg-slate-950/70 p-4 shadow-panel backdrop-blur ${offsetClass}`}
+                className={`w-full rounded-2xl border border-white/15 bg-zinc-950/70 p-4 shadow-panel backdrop-blur ${offsetClass}`}
                 initial={shouldReduceMotion ? undefined : { opacity: 0, scale: 0.95, y: 15 }}
                 animate={
                   shouldReduceMotion
@@ -142,7 +142,7 @@ export function Hero() {
                   <Icon className="h-5 w-5" />
                 </div>
                 <p className="mt-3 text-sm font-semibold text-white">{item.title}</p>
-                <p className="mt-1 text-xs text-slate-300">{item.detail}</p>
+                <p className="mt-1 text-xs text-zinc-300">{item.detail}</p>
               </motion.div>
             );
           })}
@@ -151,6 +151,7 @@ export function Hero() {
     </section>
   );
 }
+
 
 
 
