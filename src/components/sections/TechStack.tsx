@@ -43,7 +43,7 @@ export function TechStack() {
             {[...marqueeItems, ...marqueeItems].map((item, index) => (
               <span
                 key={`${item}-${index}`}
-                className="inline-flex rounded-full border border-lime-300/25 bg-lime-300/10 px-4 py-2 text-sm font-medium text-lime-100"
+                className="inline-flex rounded-full border border-emerald-300/25 bg-emerald-300/10 px-4 py-2 text-sm font-medium text-emerald-100"
               >
                 {item}
               </span>
@@ -75,6 +75,7 @@ export function TechStack() {
     </section>
   );
 }
+
 
 
 

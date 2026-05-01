@@ -33,3 +33,4 @@ export function QoriChatButton({ isOpen, onClick }: QoriChatButtonProps) {
     </button>
   );
 }
+

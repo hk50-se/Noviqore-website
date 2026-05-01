@@ -13,7 +13,7 @@ export default function Image() {
     (
       <div
         style={{
-          background: 'radial-gradient(circle at 20% 20%, rgba(163,230,53,.45), rgba(8,8,8,1))',
+          background: 'radial-gradient(circle at 20% 20%, rgba(103,138,118,.35), rgba(10,10,10,1))',
           color: 'white',
           width: '100%',
           height: '100%',
@@ -30,7 +30,7 @@ export default function Image() {
               width: '54px',
               height: '54px',
               borderRadius: '12px',
-              background: 'linear-gradient(135deg, #a3e635, #34d399, #f43f5e)',
+              background: 'linear-gradient(135deg, #6a8d78, #7f987f, #a68459)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center'
@@ -42,7 +42,7 @@ export default function Image() {
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-          <p style={{ fontSize: 18, textTransform: 'uppercase', letterSpacing: '.3em', color: '#bef264', margin: 0 }}>
+          <p style={{ fontSize: 18, textTransform: 'uppercase', letterSpacing: '.3em', color: '#d5c1a0', margin: 0 }}>
             Software and AI solutions
           </p>
           <h1 style={{ fontSize: 64, lineHeight: 1.1, margin: 0, maxWidth: '920px' }}>
@@ -56,6 +56,7 @@ export default function Image() {
     }
   );
 }
+
 
 
 

@@ -47,7 +47,7 @@ export function Hero() {
             initial={shouldReduceMotion ? undefined : { opacity: 0, y: 16 }}
             animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="mx-auto inline-flex rounded-full border border-lime-300/30 bg-lime-300/10 px-4 py-1 text-xs font-medium uppercase tracking-[0.2em] text-lime-200"
+            className="mx-auto inline-flex rounded-full border border-emerald-300/30 bg-emerald-300/10 px-4 py-1 text-xs font-medium uppercase tracking-[0.2em] text-emerald-200"
           >
             Intelligent software. Built from idea to scale.
           </motion.p>
@@ -138,7 +138,7 @@ export function Hero() {
                   }
                 }}
               >
-                <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-lime-300/15 text-lime-200">
+                <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-300/15 text-emerald-200">
                   <Icon className="h-5 w-5" />
                 </div>
                 <p className="mt-3 text-sm font-semibold text-white">{item.title}</p>
@@ -151,6 +151,7 @@ export function Hero() {
     </section>
   );
 }
+
 
 
 

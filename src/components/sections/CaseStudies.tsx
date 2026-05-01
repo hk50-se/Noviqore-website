@@ -21,7 +21,7 @@ export function CaseStudiesSection({ limit, showCta = false }: { limit?: number;
           {items.map((study, index) => (
             <Reveal key={study.slug} delay={index * 0.05}>
               <Card className="h-full border-white/12 bg-slate-950/60">
-                <p className="text-xs uppercase tracking-[0.18em] text-lime-200">{study.label}</p>
+                <p className="text-xs uppercase tracking-[0.18em] text-emerald-200">{study.label}</p>
                 <h3 className="mt-2 text-xl font-semibold text-white">{study.title}</h3>
                 <p className="mt-2 text-sm text-slate-300">{study.summary}</p>
                 <div className="mt-4 grid gap-3 text-sm">
@@ -40,7 +40,7 @@ export function CaseStudiesSection({ limit, showCta = false }: { limit?: number;
                 </div>
                 <Link
                   href="/case-studies"
-                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-lime-200 hover:text-lime-100"
+                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-emerald-200 hover:text-emerald-100"
                 >
                   View Case Studies
                   <ArrowUpRight className="h-4 w-4" />
@@ -51,7 +51,7 @@ export function CaseStudiesSection({ limit, showCta = false }: { limit?: number;
         </div>
 
         {showCta ? (
-          <Link href="/case-studies" className="inline-flex items-center gap-2 text-sm font-semibold text-lime-200 hover:text-lime-100">
+          <Link href="/case-studies" className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-200 hover:text-emerald-100">
             View all case studies
             <ArrowUpRight className="h-4 w-4" />
           </Link>
@@ -60,6 +60,7 @@ export function CaseStudiesSection({ limit, showCta = false }: { limit?: number;
     </section>
   );
 }
+
 
 
 

@@ -102,7 +102,7 @@ export default function AISolutionsPage() {
             const Icon = pillar.icon;
             return (
               <Card key={pillar.title} className="border-white/12 bg-slate-950/60">
-                <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-lime-300/12 text-lime-200">
+                <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-300/12 text-emerald-200">
                   <Icon className="h-5 w-5" />
                 </div>
                 <h2 className="mt-4 text-xl font-semibold text-white">{pillar.title}</h2>
@@ -143,7 +143,7 @@ export default function AISolutionsPage() {
                   </li>
                 ))}
               </ul>
-              <Link href="/contact" className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-lime-200 hover:text-lime-100">
+              <Link href="/contact" className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-emerald-200 hover:text-emerald-100">
                 Discuss this use case
                 <ArrowUpRight className="h-4 w-4" />
               </Link>
@@ -157,6 +157,7 @@ export default function AISolutionsPage() {
     </>
   );
 }
+
 
 
 

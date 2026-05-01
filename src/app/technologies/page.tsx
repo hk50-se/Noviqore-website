@@ -43,7 +43,7 @@ export default function TechnologiesPage() {
             const Icon = iconMap[group.category as keyof typeof iconMap];
             return (
               <Card key={group.category} className="border-white/12 bg-slate-950/60">
-                <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-lime-300/12 text-lime-200">
+                <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-300/12 text-emerald-200">
                   <Icon className="h-5 w-5" />
                 </div>
                 <h2 className="mt-4 text-xl font-semibold text-white">{group.category}</h2>
@@ -59,6 +59,7 @@ export default function TechnologiesPage() {
     </>
   );
 }
+
 
 
 

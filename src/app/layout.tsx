@@ -71,7 +71,7 @@ export default function RootLayout({
       <body className={`${spaceGrotesk.variable} ${plusJakarta.variable} font-sans`}>
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-lime-400 focus:px-4 focus:py-2 focus:text-slate-950"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-emerald-400 focus:px-4 focus:py-2 focus:text-slate-950"
         >
           Skip to content
         </a>
@@ -99,6 +99,7 @@ export default function RootLayout({
     </html>
   );
 }
+
 
 
 

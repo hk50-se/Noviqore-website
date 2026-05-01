@@ -20,7 +20,7 @@ export function AISolutionsSection({ compact = false }: { compact?: boolean }) {
           {items.map((item, index) => (
             <Reveal key={item.id} delay={index * 0.05}>
               <Card className="h-full border-white/12 bg-gradient-to-b from-slate-900/90 to-slate-950/70">
-                <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-lime-400/15 text-lime-200">
+                <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-400/15 text-emerald-200">
                   <BrainCircuit className="h-5 w-5" />
                 </div>
                 <h3 className="mt-4 text-lg font-semibold text-white">{item.title}</h3>
@@ -39,7 +39,7 @@ export function AISolutionsSection({ compact = false }: { compact?: boolean }) {
         {compact ? (
           <Link
             href="/ai-solutions"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-lime-200 hover:text-lime-100"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-200 hover:text-emerald-100"
           >
             Explore full AI capabilities
             <ArrowUpRight className="h-4 w-4" />
@@ -49,6 +49,7 @@ export function AISolutionsSection({ compact = false }: { compact?: boolean }) {
     </section>
   );
 }
+
 
 
 

@@ -44,17 +44,17 @@ export default function ContactPage() {
               <h3 className="text-lg font-semibold text-white">Direct Contact</h3>
               <ul className="mt-4 space-y-3 text-sm text-slate-300">
                 <li className="inline-flex items-center gap-2">
-                  <Mail className="h-4 w-4 text-lime-300" />
+                  <Mail className="h-4 w-4 text-emerald-300" />
                   <a href={`mailto:${siteConfig.email}`} className="hover:text-white">
                     {siteConfig.email}
                   </a>
                 </li>
                 <li className="inline-flex items-center gap-2">
-                  <MapPin className="h-4 w-4 text-lime-300" />
+                  <MapPin className="h-4 w-4 text-emerald-300" />
                   <span>{siteConfig.location}</span>
                 </li>
                 <li className="inline-flex items-center gap-2">
-                  <PhoneCall className="h-4 w-4 text-lime-300" />
+                  <PhoneCall className="h-4 w-4 text-emerald-300" />
                   <span>Consultation scheduling available after initial review</span>
                 </li>
               </ul>
@@ -75,6 +75,7 @@ export default function ContactPage() {
     </>
   );
 }
+
 
 
 

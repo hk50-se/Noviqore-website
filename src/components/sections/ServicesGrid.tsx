@@ -38,8 +38,8 @@ export function ServicesGrid({ limit, showCta = true }: ServicesGridProps) {
 
             return (
               <Reveal key={service.id} delay={index * 0.05}>
-                <Card className="group h-full border-white/12 bg-slate-950/50 p-5 hover:-translate-y-1 hover:border-lime-300/40">
-                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-lime-300/12 text-lime-200 transition group-hover:bg-lime-300/20">
+                <Card className="group h-full border-white/12 bg-slate-950/50 p-5 hover:-translate-y-1 hover:border-emerald-300/40">
+                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-300/12 text-emerald-200 transition group-hover:bg-emerald-300/20">
                     <Icon className="h-5 w-5" />
                   </div>
                   <h3 className="mt-4 text-lg font-semibold text-white">{service.title}</h3>
@@ -63,6 +63,7 @@ export function ServicesGrid({ limit, showCta = true }: ServicesGridProps) {
     </section>
   );
 }
+
 
 
 

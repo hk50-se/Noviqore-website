@@ -26,3 +26,4 @@ export function QoriQuickActions({ actions, onSelect }: QoriQuickActionsProps) {
     </div>
   );
 }
+

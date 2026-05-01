@@ -91,12 +91,12 @@ export function ContactForm() {
             autoComplete="name"
             value={form.name}
             onChange={(event) => handleChange('name', event.target.value)}
-            className="w-full rounded-xl border border-white/15 bg-slate-900/70 px-4 py-2.5 text-slate-100 outline-none ring-0 transition focus:border-lime-300/40"
+            className="w-full rounded-xl border border-white/15 bg-slate-900/70 px-4 py-2.5 text-slate-100 outline-none ring-0 transition focus:border-emerald-300/40"
             aria-invalid={Boolean(errors.name)}
             aria-describedby={errors.name ? 'name-error' : undefined}
           />
           {errors.name ? (
-            <p id="name-error" className="text-xs text-rose-300">
+            <p id="name-error" className="text-xs text-red-300">
               {errors.name}
             </p>
           ) : null}
@@ -113,12 +113,12 @@ export function ContactForm() {
             autoComplete="email"
             value={form.email}
             onChange={(event) => handleChange('email', event.target.value)}
-            className="w-full rounded-xl border border-white/15 bg-slate-900/70 px-4 py-2.5 text-slate-100 outline-none ring-0 transition focus:border-lime-300/40"
+            className="w-full rounded-xl border border-white/15 bg-slate-900/70 px-4 py-2.5 text-slate-100 outline-none ring-0 transition focus:border-emerald-300/40"
             aria-invalid={Boolean(errors.email)}
             aria-describedby={errors.email ? 'email-error' : undefined}
           />
           {errors.email ? (
-            <p id="email-error" className="text-xs text-rose-300">
+            <p id="email-error" className="text-xs text-red-300">
               {errors.email}
             </p>
           ) : null}
@@ -136,12 +136,12 @@ export function ContactForm() {
             autoComplete="organization"
             value={form.company}
             onChange={(event) => handleChange('company', event.target.value)}
-            className="w-full rounded-xl border border-white/15 bg-slate-900/70 px-4 py-2.5 text-slate-100 outline-none ring-0 transition focus:border-lime-300/40"
+            className="w-full rounded-xl border border-white/15 bg-slate-900/70 px-4 py-2.5 text-slate-100 outline-none ring-0 transition focus:border-emerald-300/40"
             aria-invalid={Boolean(errors.company)}
             aria-describedby={errors.company ? 'company-error' : undefined}
           />
           {errors.company ? (
-            <p id="company-error" className="text-xs text-rose-300">
+            <p id="company-error" className="text-xs text-red-300">
               {errors.company}
             </p>
           ) : null}
@@ -156,7 +156,7 @@ export function ContactForm() {
             name="budgetRange"
             value={form.budgetRange}
             onChange={(event) => handleChange('budgetRange', event.target.value as ContactInput['budgetRange'])}
-            className="w-full rounded-xl border border-white/15 bg-slate-900/70 px-4 py-2.5 text-slate-100 outline-none transition focus:border-lime-300/40"
+            className="w-full rounded-xl border border-white/15 bg-slate-900/70 px-4 py-2.5 text-slate-100 outline-none transition focus:border-emerald-300/40"
             aria-invalid={Boolean(errors.budgetRange)}
           >
             {contactBudgetRanges.map((option) => (
@@ -177,7 +177,7 @@ export function ContactForm() {
           name="projectType"
           value={form.projectType}
           onChange={(event) => handleChange('projectType', event.target.value as ContactInput['projectType'])}
-          className="w-full rounded-xl border border-white/15 bg-slate-900/70 px-4 py-2.5 text-slate-100 outline-none transition focus:border-lime-300/40"
+          className="w-full rounded-xl border border-white/15 bg-slate-900/70 px-4 py-2.5 text-slate-100 outline-none transition focus:border-emerald-300/40"
           aria-invalid={Boolean(errors.projectType)}
         >
           {contactProjectTypes.map((option) => (
@@ -198,13 +198,13 @@ export function ContactForm() {
           rows={6}
           value={form.message}
           onChange={(event) => handleChange('message', event.target.value)}
-          className="w-full resize-y rounded-xl border border-white/15 bg-slate-900/70 px-4 py-2.5 text-slate-100 outline-none transition focus:border-lime-300/40"
+          className="w-full resize-y rounded-xl border border-white/15 bg-slate-900/70 px-4 py-2.5 text-slate-100 outline-none transition focus:border-emerald-300/40"
           aria-invalid={Boolean(errors.message)}
           aria-describedby={errors.message ? 'message-error' : 'message-count'}
         />
         <div className="flex items-center justify-between gap-3">
           {errors.message ? (
-            <p id="message-error" className="text-xs text-rose-300">
+            <p id="message-error" className="text-xs text-red-300">
               {errors.message}
             </p>
           ) : (
@@ -216,7 +216,7 @@ export function ContactForm() {
       </div>
 
       {status ? (
-        <p className={status.type === 'success' ? 'text-sm text-emerald-300' : 'text-sm text-rose-300'}>{status.message}</p>
+        <p className={status.type === 'success' ? 'text-sm text-emerald-300' : 'text-sm text-red-300'}>{status.message}</p>
       ) : null}
 
       <Button type="submit" size="lg" disabled={isSubmitting} aria-label="Submit project inquiry">
@@ -225,6 +225,7 @@ export function ContactForm() {
     </form>
   );
 }
+
 
 
 

@@ -42,11 +42,11 @@ const config: Config = {
         display: ['var(--font-plus-jakarta)', 'ui-sans-serif', 'system-ui']
       },
       boxShadow: {
-        glow: '0 0 0 1px rgba(163, 230, 53, 0.32), 0 12px 40px rgba(244, 63, 94, 0.22)',
+        glow: '0 0 0 1px rgba(103, 138, 118, 0.28), 0 12px 36px rgba(166, 128, 89, 0.18)',
         panel: '0 20px 40px rgba(2, 6, 23, 0.45)'
       },
       backgroundImage: {
-        'grid-pattern': 'linear-gradient(to right, rgba(155, 214, 79, 0.12) 1px, transparent 1px), linear-gradient(to bottom, rgba(244, 63, 94, 0.1) 1px, transparent 1px)'
+        'grid-pattern': 'linear-gradient(to right, rgba(110, 134, 120, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(166, 128, 89, 0.08) 1px, transparent 1px)'
       },
       keyframes: {
         marquee: {

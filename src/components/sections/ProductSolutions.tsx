@@ -40,7 +40,7 @@ export function ProductSolutionsSection({ limit }: { limit?: number }) {
                     ) : null}
                   </div>
                 <p className="mt-2 text-sm text-slate-300">{product.description}</p>
-                <p className="mt-4 text-xs font-semibold uppercase tracking-[0.18em] text-lime-200">Key Features</p>
+                <p className="mt-4 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-200">Key Features</p>
                 <ul className="mt-3 grid gap-2 text-sm text-slate-300">
                   {product.features.map((feature) => (
                     <li key={feature} className="rounded-md border border-white/10 bg-white/[0.02] px-3 py-2">
@@ -51,7 +51,7 @@ export function ProductSolutionsSection({ limit }: { limit?: number }) {
                 <p className="mt-4 text-sm text-slate-300">
                   <span className="font-semibold text-slate-100">Ideal for:</span> {product.idealFor}
                 </p>
-                <Link href="/contact" className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-lime-200 hover:text-lime-100">
+                <Link href="/contact" className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-emerald-200 hover:text-emerald-100">
                   {product.cta}
                   <ArrowUpRight className="h-4 w-4" />
                 </Link>
@@ -64,6 +64,7 @@ export function ProductSolutionsSection({ limit }: { limit?: number }) {
     </section>
   );
 }
+
 
 
 

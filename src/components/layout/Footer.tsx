@@ -36,13 +36,13 @@ export function Footer() {
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">Contact</p>
           <ul className="space-y-3 text-sm text-slate-300">
             <li className="inline-flex items-center gap-2">
-              <Mail className="h-4 w-4 text-lime-300" />
+              <Mail className="h-4 w-4 text-emerald-300" />
               <a href={`mailto:${siteConfig.email}`} className="hover:text-white">
                 {siteConfig.email}
               </a>
             </li>
             <li className="inline-flex items-center gap-2">
-              <MapPin className="h-4 w-4 text-lime-300" />
+              <MapPin className="h-4 w-4 text-emerald-300" />
               <span>{siteConfig.location}</span>
             </li>
             <li>
@@ -66,3 +66,4 @@ export function Footer() {
     </footer>
   );
 }
+

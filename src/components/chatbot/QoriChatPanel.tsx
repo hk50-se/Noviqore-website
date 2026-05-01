@@ -77,3 +77,4 @@ export function QoriChatPanel({ messages, actions, onActionSelect }: QoriChatPan
     </section>
   );
 }
+

@@ -67,7 +67,7 @@ export default function AboutPage() {
             const Icon = value.icon;
             return (
               <Card key={value.title} className="border-white/12 bg-slate-950/60">
-                <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-lime-300/12 text-lime-200">
+                <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-300/12 text-emerald-200">
                   <Icon className="h-5 w-5" />
                 </div>
                 <h3 className="mt-4 text-lg font-semibold text-white">{value.title}</h3>
@@ -83,6 +83,7 @@ export default function AboutPage() {
     </>
   );
 }
+
 
 
 

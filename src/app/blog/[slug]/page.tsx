@@ -63,9 +63,9 @@ export default async function BlogArticlePage({
   return (
     <>
       <section className="relative overflow-hidden border-b border-white/10 pb-12 pt-4 sm:pb-14">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_10%,rgba(163,230,53,0.16),transparent_35%),radial-gradient(circle_at_80%_0%,rgba(244,63,94,0.14),transparent_34%)]" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_10%,rgba(86,125,104,0.14),transparent_35%),radial-gradient(circle_at_80%_0%,rgba(191,145,92,0.1),transparent_34%)]" />
         <div className="container-shell">
-          <p className="text-xs uppercase tracking-[0.18em] text-lime-200">{post.category}</p>
+          <p className="text-xs uppercase tracking-[0.18em] text-emerald-200">{post.category}</p>
           <h1 className="mt-4 max-w-4xl font-display text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
             {post.title}
           </h1>
@@ -111,3 +111,4 @@ export default async function BlogArticlePage({
     </>
   );
 }
+
