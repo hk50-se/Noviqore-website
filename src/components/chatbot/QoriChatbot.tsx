@@ -6,6 +6,13 @@ import { QoriChatButton } from '@/components/chatbot/QoriChatButton';
 import { QoriChatPanel, type QoriMessage } from '@/components/chatbot/QoriChatPanel';
 import type { QoriQuickAction } from '@/components/chatbot/QoriQuickActions';
 
+type QoriApiResponse = {
+  ok?: boolean;
+  reply?: string;
+  references?: Array<{ title: string; path: string }>;
+  message?: string;
+};
+
 const quickActions: QoriQuickAction[] = [
   { id: 'website', label: 'I need a website', prompt: 'I need a website' },
   { id: 'ai-solution', label: 'I need an AI solution', prompt: 'I need an AI solution' },
@@ -14,29 +21,22 @@ const quickActions: QoriQuickAction[] = [
   { id: 'discuss-project', label: 'I want to discuss a project', prompt: 'I want to discuss a project' }
 ];
 
-const assistantReplies: Record<string, string> = {
-  website:
-    'Great. Noviqore can plan, design, and build high-performance websites and web apps with strong SEO and conversion-focused UX.',
-  'ai-solution':
-    'Excellent direction. Noviqore builds AI assistants, LLM apps, automation workflows, and enterprise-ready AI systems with reliability controls.',
-  'backend-api':
-    'Noviqore can architect scalable backend systems, clean API layers, and integration pipelines for long-term product growth.',
-  'cloud-deployment':
-    'We can help deploy and scale your platform on AWS with secure CI/CD, observability, and cost-aware infrastructure planning.',
-  'discuss-project':
-    'Perfect. Share your goals in the contact form and Noviqore will follow up with scope recommendations and a delivery plan.'
-};
-
 const initialMessage: QoriMessage = {
   id: 'qori-initial',
   role: 'assistant',
   content:
-    "Hi, I'm Qori 👋 I can help you explore Noviqore's services, AI solutions, project process, and how we can build your product."
+    "Hi, I'm Qori \u{1F44B} I can help you explore Noviqore's services, AI solutions, project process, and how we can build your product."
 };
+
+function buildMessageId(role: QoriMessage['role']) {
+  return `${role}-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+}
 
 export function QoriChatbot() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<QoriMessage[]>([initialMessage]);
+  const [draft, setDraft] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const shouldReduceMotion = useReducedMotion();
 
   const panelMotion = useMemo(
@@ -48,23 +48,64 @@ export function QoriChatbot() {
     [shouldReduceMotion]
   );
 
-  function handleQuickAction(action: QoriQuickAction) {
+  async function submitPrompt(prompt: string) {
+    const query = prompt.trim();
+    if (!query || isLoading) return;
+
     const userMessage: QoriMessage = {
-      id: `user-${Date.now()}`,
+      id: buildMessageId('user'),
       role: 'user',
-      content: action.prompt
+      content: query
     };
 
-    const assistantMessage: QoriMessage = {
-      id: `assistant-${Date.now()}`,
-      role: 'assistant',
-      content: assistantReplies[action.id] ?? 'Thanks. Tell us more about your project requirements.'
-    };
+    setDraft('');
+    setMessages((current) => [...current, userMessage]);
+    setIsLoading(true);
 
-    setMessages((current) => [...current, userMessage, assistantMessage]);
+    try {
+      const response = await fetch('/api/qori', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          query,
+          history: messages.slice(-10).map((message) => ({
+            role: message.role,
+            content: message.content
+          }))
+        })
+      });
 
-    // TODO: Replace this placeholder logic with OpenAI/LLM API integration
-    // and persist threaded conversation state with your backend.
+      const data = (await response.json()) as QoriApiResponse;
+
+      if (!response.ok || !data.reply) {
+        throw new Error(data.message ?? 'Qori could not process your request right now.');
+      }
+
+      const assistantMessage: QoriMessage = {
+        id: buildMessageId('assistant'),
+        role: 'assistant',
+        content: data.reply,
+        references: data.references
+      };
+
+      setMessages((current) => [...current, assistantMessage]);
+    } catch (error) {
+      const fallbackMessage: QoriMessage = {
+        id: buildMessageId('assistant'),
+        role: 'assistant',
+        content:
+          error instanceof Error
+            ? `I hit a connection issue: ${error.message}`
+            : 'I hit a connection issue. Please try again or use the contact page for immediate follow-up.'
+      };
+      setMessages((current) => [...current, fallbackMessage]);
+    } finally {
+      setIsLoading(false);
+    }
+  }
+
+  function handleQuickAction(action: QoriQuickAction) {
+    void submitPrompt(action.prompt);
   }
 
   return (
@@ -76,7 +117,15 @@ export function QoriChatbot() {
             transition={{ duration: shouldReduceMotion ? 0.15 : 0.28, ease: 'easeOut' }}
             className="pointer-events-auto"
           >
-            <QoriChatPanel messages={messages} actions={quickActions} onActionSelect={handleQuickAction} />
+            <QoriChatPanel
+              messages={messages}
+              actions={quickActions}
+              onActionSelect={handleQuickAction}
+              draft={draft}
+              onDraftChange={setDraft}
+              onSubmit={(value) => void submitPrompt(value)}
+              isLoading={isLoading}
+            />
           </motion.div>
         ) : null}
       </AnimatePresence>
@@ -87,5 +136,3 @@ export function QoriChatbot() {
     </div>
   );
 }
-
-

@@ -13,7 +13,7 @@ import { MobileNav } from '@/components/layout/MobileNav';
 function LogoMark() {
   return (
     <span className="inline-flex items-center gap-2 text-xl font-semibold tracking-tight text-white">
-      <Image src="/brand/noviqore-icon.png" alt="Noviqore brand icon" width={28} height={28} className="h-7 w-7 rounded-lg shadow-glow" />
+      <Image src="/brand/logo_icon.png" alt="Noviqore brand icon" width={28} height={28} className="h-7 w-7 rounded-lg object-contain shadow-glow" />
       <span className="font-display">Noviqore</span>
     </span>
   );

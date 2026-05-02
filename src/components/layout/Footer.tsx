@@ -10,7 +10,7 @@ export function Footer() {
       <div className="container-shell grid gap-10 py-14 lg:grid-cols-[1.2fr_1fr_1fr]">
         <div className="space-y-4">
           <div className="inline-flex items-center gap-2 text-lg font-semibold text-white">
-            <Image src="/brand/noviqore-icon.png" alt="Noviqore brand icon" width={24} height={24} className="h-6 w-6 rounded-md" />
+            <Image src="/brand/logo_icon.png" alt="Noviqore brand icon" width={24} height={24} className="h-6 w-6 rounded-md object-contain" />
             <span className="font-display">Noviqore</span>
           </div>
           <p className="max-w-sm text-sm text-zinc-300">{siteConfig.tagline}</p>
@@ -59,12 +59,10 @@ export function Footer() {
       </div>
       <div className="border-t border-white/10 py-4">
         <div className="container-shell flex flex-col gap-1 text-xs text-zinc-400 sm:flex-row sm:items-center sm:justify-between">
-          <p>� {new Date().getFullYear()} Noviqore. All rights reserved.</p>
+          <p>Copyright {new Date().getFullYear()} Noviqore. All rights reserved.</p>
           <p>Built with Next.js, TypeScript, and performance-first engineering.</p>
         </div>
       </div>
     </footer>
   );
 }
-
-

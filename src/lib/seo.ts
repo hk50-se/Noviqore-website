@@ -50,7 +50,7 @@ export function buildOrganizationSchema() {
     '@type': 'Organization',
     name: siteConfig.name,
     url: siteConfig.url,
-    logo: absoluteUrl('/brand/noviqore-icon.png', siteConfig.url),
+    logo: absoluteUrl('/brand/logo_icon.png', siteConfig.url),
     contactPoint: [
       {
         '@type': 'ContactPoint',
@@ -139,7 +139,7 @@ export function buildArticleSchema(args: {
       name: siteConfig.name,
       logo: {
         '@type': 'ImageObject',
-        url: absoluteUrl('/brand/noviqore-icon.png', siteConfig.url)
+        url: absoluteUrl('/brand/logo_icon.png', siteConfig.url)
       }
     },
     image: absoluteUrl(siteConfig.ogImage, siteConfig.url)
