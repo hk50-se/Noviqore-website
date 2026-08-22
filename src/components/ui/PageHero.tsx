@@ -1,23 +1,40 @@
 import { SectionHeading } from '@/components/ui/SectionHeading';
+import { InternalWorld } from '@/components/ui/InternalWorld';
+import type { InternalWorldVariant } from '@/components/ui/InternalWorldCanvas';
 
 type PageHeroProps = {
   eyebrow?: string;
   title: string;
   description: string;
+  variant?: InternalWorldVariant;
 };
 
-export function PageHero({ eyebrow, title, description }: PageHeroProps) {
+function inferVariant(eyebrow = ''): InternalWorldVariant {
+  const value = eyebrow.toLowerCase();
+  if (value.includes('about')) return 'profile';
+  if (value.includes('ai')) return 'ai';
+  if (value.includes('product')) return 'products';
+  if (value.includes('process') || value.includes('delivery')) return 'process';
+  if (value.includes('case')) return 'proof';
+  if (value.includes('technolog')) return 'tech';
+  if (value.includes('contact')) return 'contact';
+  if (value.includes('blog')) return 'blog';
+  return 'services';
+}
+
+export function PageHero({ eyebrow, title, description, variant }: PageHeroProps) {
+  const sceneVariant = variant ?? inferVariant(eyebrow);
   return (
-    <section className="relative overflow-hidden border-b border-white/10 pb-10 pt-4 sm:pb-14">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_10%,rgba(86,125,104,0.14),transparent_35%),radial-gradient(circle_at_80%_0%,rgba(191,145,92,0.1),transparent_34%)]" />
-      <div className="container-shell">
-        <SectionHeading eyebrow={eyebrow} title={title} description={description} />
+    <section className={`qore-page-hero qore-page-${sceneVariant}`}>
+      <InternalWorld variant={sceneVariant} />
+      <div className="qore-page-grid" aria-hidden="true"/>
+      <div className="container-shell qore-page-copy">
+        <SectionHeading eyebrow={eyebrow} title={title} description={description} headingLevel="h1" className="qore-page-heading" />
       </div>
+      <div className="qore-page-meta"><span>NQ / {sceneVariant}</span><span>Interactive system view</span></div>
     </section>
   );
 }
-
-
 
 
 

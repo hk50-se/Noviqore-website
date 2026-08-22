@@ -13,7 +13,7 @@ export function CTASection({ variant = 'default' }: CTASectionProps) {
   return (
     <section className="section-space pt-4">
       <div className="container-shell">
-        <div className="relative overflow-hidden rounded-3xl border border-white/15 bg-gradient-to-r from-zinc-900/95 via-emerald-950/25 to-amber-950/20 p-8 shadow-panel sm:p-10 lg:p-14">
+        <div className="qore-cta-panel relative overflow-hidden rounded-3xl border border-white/15 bg-gradient-to-r from-zinc-900/95 via-emerald-950/25 to-amber-950/20 p-8 shadow-panel sm:p-10 lg:p-14">
           <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-emerald-300/18 blur-3xl" />
           <div className="absolute -bottom-20 left-0 h-64 w-64 rounded-full bg-emerald-500/20 blur-3xl" />
 
@@ -58,4 +58,3 @@ export function CTASection({ variant = 'default' }: CTASectionProps) {
     </section>
   );
 }
-

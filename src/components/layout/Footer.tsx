@@ -6,11 +6,11 @@ import { siteConfig } from '@/lib/constants';
 
 export function Footer() {
   return (
-    <footer className="relative border-t border-white/10 bg-zinc-950/65">
+    <footer className="qore-site-footer relative border-t border-white/10 bg-zinc-950/65">
       <div className="container-shell grid gap-10 py-14 lg:grid-cols-[1.2fr_1fr_1fr]">
         <div className="space-y-4">
           <div className="inline-flex items-center gap-2 text-lg font-semibold text-white">
-            <Image src="/brand/logo_icon.png" alt="Noviqore brand icon" width={24} height={24} className="h-6 w-6 rounded-md object-contain" />
+            <Image src="/brand/logo-mark.svg" alt="Noviqore brand icon" width={24} height={24} className="h-6 w-6 rounded-md object-contain" />
             <span className="font-display">Noviqore</span>
           </div>
           <p className="max-w-sm text-sm text-zinc-300">{siteConfig.tagline}</p>

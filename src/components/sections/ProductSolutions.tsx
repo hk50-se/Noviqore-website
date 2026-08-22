@@ -10,7 +10,7 @@ export function ProductSolutionsSection({ limit }: { limit?: number }) {
   const items = typeof limit === 'number' ? productSolutions.slice(0, limit) : productSolutions;
 
   return (
-    <section className="section-space">
+    <section className="qore-products-section section-space">
       <div className="container-shell space-y-10">
         <SectionHeading
           eyebrow="Products / Solutions"
@@ -64,7 +64,6 @@ export function ProductSolutionsSection({ limit }: { limit?: number }) {
     </section>
   );
 }
-
 
 
 

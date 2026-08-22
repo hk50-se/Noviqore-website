@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { CalendarDays } from 'lucide-react';
 import { blogPosts } from '@/data/blog';
 import { buildArticleSchema, buildBreadcrumbSchema, buildMetadata } from '@/lib/seo';
+import { PageHero } from '@/components/ui/PageHero';
 
 export async function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }));
@@ -62,18 +63,13 @@ export default async function BlogArticlePage({
 
   return (
     <>
-      <section className="relative overflow-hidden border-b border-white/10 pb-12 pt-4 sm:pb-14">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_10%,rgba(86,125,104,0.14),transparent_35%),radial-gradient(circle_at_80%_0%,rgba(191,145,92,0.1),transparent_34%)]" />
-        <div className="container-shell">
-          <p className="text-xs uppercase tracking-[0.18em] text-emerald-200">{post.category}</p>
-          <h1 className="mt-4 max-w-4xl font-display text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
-            {post.title}
-          </h1>
-          <p className="mt-4 max-w-3xl text-base text-zinc-300 sm:text-lg">{post.excerpt}</p>
-          <div className="mt-5 inline-flex items-center gap-2 text-sm text-zinc-400">
+      <PageHero variant="blog" eyebrow={post.category} title={post.title} description={post.excerpt} />
+      <section className="qore-article-meta">
+        <div className="container-shell flex flex-wrap items-center justify-between gap-4">
+          <div className="inline-flex items-center gap-2 text-sm text-zinc-400">
             <CalendarDays className="h-4 w-4" />
             <span>{post.publishedAt}</span>
-            <span>�</span>
+            <span>•</span>
             <span>{post.readingTime}</span>
           </div>
           {isAiArticle ? (
@@ -111,5 +107,4 @@ export default async function BlogArticlePage({
     </>
   );
 }
-
 

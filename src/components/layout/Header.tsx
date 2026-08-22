@@ -13,7 +13,7 @@ import { MobileNav } from '@/components/layout/MobileNav';
 function LogoMark() {
   return (
     <span className="inline-flex items-center gap-2 text-xl font-semibold tracking-tight text-white">
-      <Image src="/brand/logo_icon.png" alt="Noviqore brand icon" width={28} height={28} className="h-7 w-7 rounded-lg object-contain shadow-glow" />
+      <Image src="/brand/logo-mark.svg" alt="Noviqore brand icon" width={28} height={28} className="h-7 w-7 rounded-lg object-contain shadow-glow" />
       <span className="font-display">Noviqore</span>
     </span>
   );
@@ -39,7 +39,8 @@ export function Header() {
     <header className="fixed inset-x-0 top-0 z-50 px-3 py-3 sm:px-6">
       <div
         className={cn(
-          'container-shell flex items-center justify-between rounded-2xl border px-4 py-3 transition-all sm:px-6',
+          'qore-nav-shell container-shell flex items-center justify-between rounded-2xl border px-4 py-3 transition-all sm:px-6',
+          pathname === '/' && 'qore-header-shell',
           isScrolled
             ? 'border-white/20 bg-zinc-950/80 shadow-panel backdrop-blur-xl'
             : 'border-white/10 bg-zinc-900/45 backdrop-blur-sm'
@@ -90,8 +91,6 @@ export function Header() {
     </header>
   );
 }
-
-
 
 
 

@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
-import { Plus_Jakarta_Sans, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/layout/Footer';
+import { ConditionalFooter } from '@/components/layout/ConditionalFooter';
+import { QoreLoader } from '@/components/home/QoreLoader';
 import { QoriChatbot } from '@/components/chatbot/QoriChatbot';
 import { siteConfig } from '@/lib/constants';
 import {
@@ -10,18 +10,6 @@ import {
   buildProfessionalServiceSchema,
   buildWebsiteSchema
 } from '@/lib/seo';
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ['latin'],
-  variable: '--font-space-grotesk',
-  display: 'swap'
-});
-
-const plusJakarta = Plus_Jakarta_Sans({
-  subsets: ['latin'],
-  variable: '--font-plus-jakarta',
-  display: 'swap'
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -68,7 +56,8 @@ export default function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${spaceGrotesk.variable} ${plusJakarta.variable} font-sans`}>
+      <body className="font-sans">
+        <QoreLoader />
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-emerald-400 focus:px-4 focus:py-2 focus:text-zinc-950"
@@ -80,7 +69,7 @@ export default function RootLayout({
           <main id="main-content" className="pt-20 sm:pt-24">
             {children}
           </main>
-          <Footer />
+          <ConditionalFooter />
           <QoriChatbot />
         </div>
         <script
@@ -99,8 +88,6 @@ export default function RootLayout({
     </html>
   );
 }
-
-
 
 
 

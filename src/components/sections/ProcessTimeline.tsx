@@ -7,7 +7,7 @@ export function ProcessTimeline({ compact = false }: { compact?: boolean }) {
   const items = compact ? processSteps.slice(0, 7) : processSteps;
 
   return (
-    <section className="section-space">
+    <section className="qore-process-section section-space">
       <div className="container-shell space-y-10">
         <SectionHeading
           eyebrow="Process"
@@ -36,7 +36,6 @@ export function ProcessTimeline({ compact = false }: { compact?: boolean }) {
     </section>
   );
 }
-
 
 
 

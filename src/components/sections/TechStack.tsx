@@ -12,7 +12,7 @@ export function TechStack() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section className="section-space">
+    <section className="qore-tech-section section-space">
       <div className="container-shell space-y-10">
         <SectionHeading
           eyebrow="Technologies"
@@ -75,7 +75,6 @@ export function TechStack() {
     </section>
   );
 }
-
 
 
 
